@@ -52,4 +52,8 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+postgres_data
+node_modules
+
 # End of https://www.toptal.com/developers/gitignore/api/monodevelop,windows,linux
+

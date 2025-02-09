@@ -1,0 +1,37 @@
+version: '3.3'
+
+services:
+  postgres:
+    image: postgres:13
+    environment:
+      - POSTGRES_DB=my_store
+      - POSTGRES_USER=jhon
+      - POSTGRES_PASSWORD=admin123
+    ports:
+      - 5432:5432
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/data
+
+  pgadmin:
+    image: dpage/pgadmin4
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=admin@mail.com
+      - PGADMIN_DEFAULT_PASSWORD=root
+    ports:
+      - 5050:80
+
+
+# https://hub.docker.com/_/postgres
+
+# docker compose up -d postgres
+# docker compose ps
+# docker compose down
+
+# docker compose exec postgres bash
+# psql -h localhost -d my_store -U jhon
+# \d+
+# \q  ----> para salir de la base de datos
+# exit   ----> para salir del contenedor
+
+# docker ps
+# docker inspect  "iddelcontenedor"
