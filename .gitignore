@@ -54,6 +54,8 @@ $RECYCLE.BIN/
 
 postgres_data
 node_modules
+.env
+.env.example
 
 # End of https://www.toptal.com/developers/gitignore/api/monodevelop,windows,linux
 
