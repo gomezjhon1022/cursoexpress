@@ -10,4 +10,5 @@ const pool = new Pool({ connectionString: URI });
 
 module.exports = pool;
 
+// postgres://usuario:contraseña@host:puerto/base_de_datos
 
