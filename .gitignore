@@ -53,6 +53,7 @@ $RECYCLE.BIN/
 *.lnk
 
 postgres_data
+mysql_data
 node_modules
 .env
 .env.example
