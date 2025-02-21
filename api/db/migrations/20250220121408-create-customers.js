@@ -7,7 +7,7 @@ module.exports = {
     await queryInterface.createTable(CUSTOMER_TABLE, CustomerSchema);
   },
   down: async (queryInterface) => {
-    await queryInterface.drop(CUSTOMER_TABLE);
+    await queryInterface.dropTable(CUSTOMER_TABLE);
   }
 
 };
