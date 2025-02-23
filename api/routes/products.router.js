@@ -7,9 +7,6 @@ const { createProductSchema, updateProductSchema, getProductSchema } = require('
 const router = express.Router();
 const service = new ProductService();
 
-router.get('/filter', (req, res)=> {
-  res.send('filter')
-})
 
 router.get('/:id',
   validatorHandler(getProductSchema, 'params'),
@@ -23,9 +20,13 @@ router.get('/:id',
   }
 })
 
-router.get('/', async (req, res) => {
-  const products = await service.find();
-  res.json(products);
+router.get('/', async (req, res, next) => {
+  try {
+    const products =await service.find();
+    res.json(products);
+  } catch (error) {
+    next(error)
+  }
 });
 
 router.post('/',
